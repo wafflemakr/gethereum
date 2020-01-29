@@ -1,0 +1,20 @@
+{
+  "name": "roem-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "chain": "npx ganache-cli --networkId 999",
+    "deploy": "truffle migrate --reset --network rinkeby"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.29",
+    "dotenv": "^8.2.0"
+  }
+}
