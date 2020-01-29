@@ -1,11 +1,11 @@
-const Etrix = artifacts.require("Etrix");
+const Gethereum = artifacts.require("Gethereum");
 
 const newOwner = "0x7dd9B933ED8385F473Ff81e9DDc334777f20Bf1f";
 
 module.exports = async (deployer, network, accounts) => {
-  await deployer.deploy(Etrix);
+  await deployer.deploy(Gethereum);
 
-  const etrix = await Etrix.deployed();
+  const gethereum = await Gethereum.deployed();
 
-  await etrix.transferOwnership(newOwner);
+  await gethereum.transferOwnership(newOwner);
 };
