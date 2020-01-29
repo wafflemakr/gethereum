@@ -1,13 +1,20 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 require("dotenv").config();
 
-const providerFactory = network =>
-  new HDWalletProvider(
+const providerFactory = network => {
+  if (process.env.PRIVATE_KEY)
+    return new HDWalletProvider(
+      process.env.PRIVATE_KEY,
+      `https://${network}.infura.io/v3/${process.env.INFURA_KEY}`
+    );
+
+  return new HDWalletProvider(
     process.env.MNEMONICS,
     `https://${network}.infura.io/v3/${process.env.INFURA_KEY}`,
     0,
     20
   );
+};
 
 module.exports = {
   networks: {
