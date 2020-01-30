@@ -8,7 +8,8 @@
   },
   "scripts": {
     "chain": "npx ganache-cli --networkId 999",
-    "deploy": "truffle migrate --reset --network rinkeby"
+    "deploy": "truffle migrate --reset --network rinkeby",
+    "console": "truffle console --network rinkeby"
   },
   "keywords": [],
   "author": "",
