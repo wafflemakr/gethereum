@@ -1,6 +1,9 @@
-/**
- * https://Gethereum.com 
-*/
+/*
+
+    Version 2.3
+    https://Gethereum.com/
+
+**/
 
 pragma solidity 0.5.11;
 
